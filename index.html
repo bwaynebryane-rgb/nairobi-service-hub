@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nairobi Services Hub - Find Plumber, Electrician, Mama Fua Near You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial; background: #f2f2f2; margin: 0; }
+.header { background: #008000; color: white; text-align: center; padding: 30px; }
+.header h1 { margin: 0; }
+.search { text-align: center; padding: 20px; }
+.search input { padding: 12px; width: 85%; border-radius: 10px; border: 1px solid #ccc; font-size: 16px; }
+.card { background: white; margin: 15px; padding: 20px; border-radius: 15px; box-shadow: 0 2px 5px #ccc; }
+.card h3 { margin: 0; }
+.badge { background: #008000; color: white; padding: 3px 10px; border-radius: 10px; font-size: 12px; }
+.price { color: #008000; font-weight: bold; }
+.btn { display: inline-block; background: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 10px; margin-top: 10px; font-weight: bold; }
+.owner-btn { background: #ff9900; color: white; padding: 15px 25px; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-block; margin: 20px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>🇰🇪 NAIROBI SERVICES HUB</h1>
+<p>Find Trusted Plumbers, Electricians, Cleaners Near You</p>
+<a class="owner-btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20Nairobi%20Services%20Hub!%20I%20want%20to%20list%20my%20service.%20My%20Name:%20%20My%20Service:%20%20My%20Area:%20%20My%20Price:">+ LIST YOUR SERVICE HERE</a>
+<p style="font-size:13px;">Service Owners: Click above to apply via WhatsApp</p>
+</div>
+
+<div class="search">
+<input type="text" id="searchBox" onkeyup="searchService()" placeholder="Search: Plumber Kayole, Electrician Westlands, Mama Fua...">
+</div>
+
+<div id="services">
+
+<div class="card">
+<h3>John Kamau - Plumber 🔧 <span class="badge">✅ Verified</span></h3>
+<p>📍 Kayole | ⭐ 4.8 (12 jobs) | <span class="price">From Ksh 500</span></p>
+<p>Fixes leaks, installs tanks, unblocks drains. Available today.</p>
+<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20John,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20a%20plumber%20in%20Kayole.">Chat on WhatsApp</a>
+</div>
+
+<div class="card">
+<h3>Mary Wanjiru - Mama Fua / Cleaner 🧹 <span class="badge">✅ Verified</span></h3>
+<p>📍 Kilimani | ⭐ 5.0 (20 jobs) | <span class="price">From Ksh 800 / day</span></p>
+<p>House cleaning, laundry, ironing. Trusted, brings own supplies.</p>
+<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20Mary,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20cleaning%20in%20Kilimani.">Chat on WhatsApp</a>
+</div>
+
+<div class="card">
+<h3>Kevin Otis - Electrician ⚡ <span class="badge">✅ Verified</span></h3>
+<p>📍 Westlands | ⭐ 4.9 (15 jobs) | <span class="price">From Ksh 1000</span></p>
+<p>Wiring, sockets, lights, shower installation. Licensed.</p>
+<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20Kevin,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20an%20electrician%20in%20Westlands.">Chat on WhatsApp</a>
+</div>
+
+</div>
+
+<script>
+function searchService() {
+  let input = document.getElementById("searchBox").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
+  for(let i=0; i<cards.length; i++) {
+    let text = cards[i].innerText.toLowerCase();
+    if(text.includes(input)) { cards[i].style.display = "block"; }
+    else { cards[i].style.display = "none"; }
+  }
+}
+</script>
+
+</body>
+</html>
