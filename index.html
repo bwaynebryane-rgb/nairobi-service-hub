@@ -1,137 +1,35 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<div style="text-align:center; padding: 10px;">
-<h1 style="font-size:32px; margin:0;">🤝 Nairobi Service Hub</h1>h1
-<div style="text-align:center; padding:!15 px; background:#fff; border-radius:12px; margin:15px 0;">
-<h3 style ="margin:0 0 10px 0;">🔍 What Service Do You Need?</h3>
-<button onclick="filterService('all')" style="padding:10px 15px; margin:5px; border-radius:20px; border:none; background: color:#fff; font-weight:bold;">All</button>
-<button onclick="filterService('electrician')" style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #Oa7a42; background:#fff;">💡 Electrician</button>
-<button onclick="filterService('plumber')" style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #oa7a42; background:#fff;">👨‍🔧 Plumber</button>
-<button onclick="filterService('cleaner')" 
-<button onclick="filterService('')
-<p style="font-size:18px; font-weight:bold; margin:5px;">Connecting you with Trusted Proffesionals</p>
-<p style="font-size:14px; opacity:0.9;">
-<style>
-body { font-family: Arial; background: #f2f2f2; margin: 0; }
-.header { background: #008000; color: white; text-align: center; padding: 30px; }
-.header h1 { margin: 0; }
-.search { text-align: center; padding: 20px; }
-.search input { padding: 12px; width: 85%; border-radius: 10px; border: 1px solid #ccc; font-size: 16px; }
-.card { background: white; margin: 15px; padding: 20px; border-radius: 15px; box-shadow: 0 2px 5px #ccc; }
-.card h3 { margin: 0; }
-.badge { background: #008000; color: white; padding: 3px 10px; border-radius: 10px; font-size: 12px; }
-.price { color: #008000; font-weight: bold; }
-.btn { display: inline-block; background: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 10px; margin-top: 10px; font-weight: bold; }
-.owner-btn { background: #ff9900; color: white; padding: 15px 25px; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-block; margin: 20px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nairobi Service Hub</title>
 </head>
-<body>
+<body style="font-family:Arial; background:#f2f2f2; margin:0; padding:0;">
 
-<div class="header">
-<h1>🇰🇪 NAIROBI SERVICES HUB</h1>
-<p>Find Trusted Plumbers, Electricians, Cleaners Near You</p>
-<a class="owner-btn" href="https://wa.me/254701745229?text=Hi%20Nairobi%20Services%20Hub!%20I%20want%20to%20list%20my%20service.%20My%20Name:%20%20My%20Service:%20%20My%20Area:%20%20My%20Price:">+ LIST YOUR SERVICE HERE</a>
-<p style="font-size:13px;">Service Owners: Click above to apply via WhatsApp</p>
+<div style="text-align:center; padding:20px; background:#0a7a42; color:white;">
+<h1 style="margin:0; font-size:32px;">🤝 Nairobi Service Hub</h1>
+<p style="margin:5px; font-size:18px; font-weight:bold;">Connecting You With Trusted Professionals</p>
+<p style="margin:5px; font-size:14px;">✅ Verified Workers | ⭐ Rated by Real Customers | 📍 Kayole • Kilimani • Westlands • Rongai • CBD</p>
+<button style="background:#ffbf00; border:none; padding:12px 25px; border-radius:25px; font-weight:bold; font-size:16px; margin-top:10px;">+ LIST YOUR SERVICE HERE</button>
 </div>
 
-<div class="search">
-<input type="text" id="searchBox" onkeyup="searchService()" placeholder="Search: Plumber Kayole, Electrician Westlands, Mama Fua...">
+<div style="text-align:center; padding:15px; background:#fff; border-radius:12px; margin:15px;">
+<h3 style="margin:0 0 10px 0;">🔍 What Service Do You Need?</h3>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:none; background:#0a7a42; color:#fff; font-weight:bold;">All</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🔧 Plumber</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">💡 Electrician</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🧹 Cleaner</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🎨 Painter</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🪑 Carpenter</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🚗 Mechanic</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🚚 Mover</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">📚 Tutor</button>
+<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">💇 Beauty</button>
 </div>
 
-<div id="services">
-
-<div class="card">
-<h3>John Kamau - Plumber 🔧 <span class="badge">✅ Verified</span></h3>
-<p>📍 Kayole | ⭐ 4.8 (12 jobs) | <span class="price">From Ksh 500</span></p>
-<p>Fixes leaks, installs tanks, unblocks drains. Available today.</p>
-<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20John,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20a%20plumber%20in%20Kayole.">Chat on WhatsApp</a>
+<div style="text-align:center; padding:20px;">
+<p>Workers will appear here in STEP 2</p>
 </div>
-
-<div class="card">
-<h3>Mary Wanjiru - Mama Fua / Cleaner 🧹 <span class="badge">✅ Verified</span></h3>
-<p>📍 Kilimani | ⭐ 5.0 (20 jobs) | <span class="price">From Ksh 800 / day</span></p>
-<p>House cleaning, laundry, ironing. Trusted, brings own supplies.</p>
-<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20Mary,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20cleaning%20in%20Kilimani.">Chat on WhatsApp</a>
-</div>
-
-<div class="card">
-<h3>Kevin Otis - Electrician ⚡ <span class="badge">✅ Verified</span></h3>
-<p> 📍Westlands | ⭐ 4.9 (15 jobs) | <span class="price">From Ksh 1000</span></p>
-<p>Wiring, sockets, lights, shower installation. Licensed.</p>
-<a class="btn" href="https://wa.me/2547XXXXXXXX?text=Hi%20Kevin,%20I%20found%20you%20on%20Nairobi%20Services%20Hub.%20I%20need%20an%20electrician%20in%20Westlands.">Chat on WhatsApp</a>
-</div>
-
-  <div class="card">
-<h3>David Mwangi - Fundi / Handyman <span class>="badge">✅ Verified</span>span></h3>
-<p>Rongai 📍 | ⭐  4.7 (10 jobs) | <span class="price">From Ksh 1500</span></p>
-<p>Car service, brakes, oil change, diagnosis.</p>
-<a class= btn" href="https://wa.me/254701745229?text=Hi,%20need%20Fundi%20in%20Rongai.">chat on whatapp</a>
-</div>
-
-<div class="card">
-<h3>Grace Akinyi - Salon /Hair <span class ="badge">✅ Verified</span></h3>
-<p>Ngong 📍 | ⭐ 5.0(4 jobs) | <span class="price">From Ksh 500</span></p>
-<p>Braiding, wig installation, manicure,<pedicure.</p>
-<a class = btn" href="https://wa.me/254701745229?text Hi,%20need%20Salon%20iservice%20in%20CBD."chat on whatapp>
-</div>
-
-<div class="card">
-<h3>Peter Njoroge - Mechanics <span class="badge">✅ Verified</span></h3>
-<p>Rongai 📍 | ⭐ 5.0(2 jobs) | <span class>="price"From 1500</span></p>
-<p>Car service, brakes, oil change,diagnosis.</p>
-<a class="btn" href="https://wa.me/254701745229?text=Hi,%20I%20need%20mechanic%20Rongai.>Chat on Whatapp</a>
-</div>
-  
-<div class="card">
-<h3>James Mutiso - mover / Transport <span class="badge">✅ Verified</span></h3>
-<p>All Nairobi 📍 | ⭐ 4.6(3 jobs) | <span class="price">From Ksh 3000</</span>p>
-<p>House moving, office moving,pickup for hire.</p>
-<a class="btn" href="https://wa.me/254701745229?text
-</div>
-
-<div class="card">
-<h3>Sarah Njeri-Tutor / Teacher <span class="badge">✅ Verified</span></h3>
-<p>Online 📍 |⭐  4.9(1 job) |<span class="price">From 600 /hr</span></p>
-<p>maths, English, KCSE, CBC homeback help.</p>
-<a class="btn" href="https://wa.me/254701745229?text=Hi,%20I%20a%20Tutor%20in%20Langata.>Chat on whatapp</a>
-</div>
-  
-<div class="card">
-<h3>Brian Maundu-Youtube Manager <span class="badge">✅ Verified</span></h3>
-<p>Online 📍 |⭐ 5.0(30 jobs) | <span class="price">from 600 /mos</span></p>
-<p>I build business websites, online shop,landing pages & portfolio sites. Fast, mobile-friendly, with Whatapp button.</p>
-<p>Create Thumbnails, Create Video, Solve Copyright Issues,Post Upload </p>
-<a class="btn" href="https://wa.me/25470174529?text=Hi,%20I%20a%20Tutor%20in%20Rongai.>Chat on whatapp</a>
-</div>
-
-<div class="card">
-<h3>Tracy Nyambura-Web develepor <span class="badge">✅ Verified</span></h3>
-<p>Westlands | ⭐ 5.0(10 jobs) | <span class="badge"> Verified</span></p>
-<p>I develop websites for individual and company </p>
-<a class="btn"href="https://wa.me/254701745229?text=Hi,%20I%20a%20Tutor%20Tutor%20in%20westlands.>Chat on Whatapp</a>
-</div>
-
-<div class="card">
-<h3>Dennis Munyao-Accountant <span class="badge">✅ Verified</span></h3>h3>
-<p>Remote 📍 |⭐ 4.3(12 jobs) | <span class="badge"> Verified</span> </p>
-< I manage bank accounts </p>
-<a class="btn"href="https://wa.me/254701745229?text=Hi,%20I%
-
-<div class ="card"
-<h3>Monica Wangari-Chef <span class="badge">✅ Verified</span></h3>
-<p>Kariobangi | ⭐ 3.6(5 jobs) | <span class="badge"> verified</span> </p>
-  
-function searchService() {
-  let input = document.getElementById("searchBox").value.toLowerCase();
-  let cards = document.getElementsByClassName("card");
-  for(let i=0; i<cards.length; i++) {
-    let text = cards[i].innerText.toLowerCase();
-    if(text.includes(input)) { cards[i].style.display = "block"; }
-    else { cards[i].style.display = "none"; }
-  }
-}
-</script>
 
 </body>
 </html>
