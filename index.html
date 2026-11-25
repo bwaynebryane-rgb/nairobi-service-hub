@@ -1,35 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nairobi Service Hub</title>
-</head>
-<body style="font-family:Arial; background:#f2f2f2; margin:0; padding:0;">
+<div id="workers" style="padding:10px;"></div>
 
-<div style="text-align:center; padding:20px; background:#0a7a42; color:white;">
-<h1 style="margin:0; font-size:32px;">🤝 Nairobi Service Hub</h1>
-<p style="margin:5px; font-size:18px; font-weight:bold;">Connecting You With Trusted Professionals</p>
-<p style="margin:5px; font-size:14px;">✅ Verified Workers | ⭐ Rated by Real Customers | 📍 Kayole • Kilimani • Westlands • Rongai • CBD</p>
-<button style="background:#ffbf00; border:none; padding:12px 25px; border-radius:25px; font-weight:bold; font-size:16px; margin-top:10px;">+ LIST YOUR SERVICE HERE</button>
+<div style="text-align:right; padding:10px; background:#fff; position:fixed; top:0; right:0; z-index:50;">
+<button onclick="document.getElementById('auth').style.display='block'" style="padding:8px 15px; border-radius:20px; border:1px solid #0a7a42; background:#fff; font-weight:bold;">👤 Login / Create Account</button>
 </div>
 
-<div style="text-align:center; padding:15px; background:#fff; border-radius:12px; margin:15px;">
-<h3 style="margin:0 0 10px 0;">🔍 What Service Do You Need?</h3>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:none; background:#0a7a42; color:#fff; font-weight:bold;">All</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🔧 Plumber</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">💡 Electrician</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🧹 Cleaner</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🎨 Painter</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🪑 Carpenter</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🚗 Mechanic</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">🚚 Mover</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">📚 Tutor</button>
-<button style="padding:10px 15px; margin:5px; border-radius:20px; border:1px solid #0a7a42; background:#fff;">💇 Beauty</button>
+<div id="auth" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:99;">
+<div style="background:#fff; max-width:350px; margin:60px auto; padding:20px; border-radius:15px;">
+<h3 style="text-align:center;">👤 Welcome to Nairobi Hub</h3>
+<input id="uName" placeholder="Your Full Name" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<input id="uPhone" placeholder="Phone e.g. 0712345678" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<button onclick="signup()" style="width:100%; padding:12px; background:#0a7a42; color:#fff; border:none; border-radius:10px; font-weight:bold; margin-top:10px;">Create Account / Login</button>
+<button onclick="document.getElementById('auth').style.display='none'" style="width:100%; padding:10px; background:#eee; border:none; border-radius:10px; margin-top:8px;">Close</button>
+<p id="authMsg" style="text-align:center; color:green; font-weight:bold;"></p>
+</div>
 </div>
 
-<div style="text-align:center; padding:20px;">
-<p>Workers will appear here in STEP 2</p>
+<div id="listForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:99;">
+<div style="background:#fff; max-width:350px; margin:40px auto; padding:20px; border-radius:15px;">
+<h3 style="text-align:center;">📋 List Your Service - FREE</h3>
+<input id="wName" placeholder="Your Name" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<select id="wCat" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc;"><option>Plumber</option><option>Electrician</option><option>Cleaner</option><option>Painter</option><option>Carpenter</option><option>Mechanic</option><option>Mover</option><option>Tutor</option><option>Beauty</option></select>
+<input id="wArea" placeholder="Area e.g. Rongai" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<input id="wPrice" placeholder="Price e.g. 1500" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<input id="wPhone" placeholder="WhatsApp 254712345678" style="width:100%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ccc; box-sizing:border-box;">
+<button onclick="addWorker()" style="width:100%; padding:12px; background:#ffbf00; border:none; border-radius:10px; font-weight:bold;">Publish My Service ✅</button>
+<button onclick="document.getElementById('listForm').style.display='none'" style="width:100%; padding:10px; background:#eee; border:none; border-radius:10px; margin-top:8px;">Close</button>
+</div>
 </div>
 
-</body>
-</html>
+<script>
+let workers = JSON.parse(localStorage.getItem('hubWorkers')||'null') || [
+{name:"David Mwangi",cat:"Plumber",area:"Kilimani",price:"1,500",rating:"4.9 (127)",phone:"254712345678",img:"https://i.pravatar.cc/150?img=12"},
+{name:"Sarah Achieng",cat:"Cleaner",area:"Westlands",price:"2,000",rating:"4.8 (98)",phone:"254723456789",img:"https://i.pravatar.cc/150?img=47"},
+{name:"John Kamau",cat:"Electrician",area:"Rongai",price:"2,500",rating:"5.0 (203)",phone:"254734567890",img:"https://i.pravatar.cc/150?img=33"},
+{name:"Grace Wanjiru",cat:"Painter",area:"Kayole",price:"3,500",rating:"4.7 (64)",phone:"254745678901",img:"https://i.pravatar.cc/150?img=45"},
+{name:"Peter Otieno",cat:"Carpenter",area:"CBD",price:"4,000",rating:"4.9 (112)",phone:"254756789012",img:"https://i.pravatar.cc/150?img=53"},
+{name:"Mary Njeri",cat:"Beauty",area:"Kilimani",price:"1,200",rating:"4.8 (89)",phone:"254767890123",img:"https://i.pravatar.cc/150?img=32"}
+];
+function render(){
+let list = workers;
+document.getElementById('workers').innerHTML = list.map(w=>`
+<div style="background:#fff; border-radius:15px; padding:15px; margin:10px auto; max-width:420px; display:flex; gap:12px; align-items:center;">
+<img src="${w.img}" style="width:70px; height:70px; border-radius:50%; object-fit:cover;">
+<div style="flex:1; text-align:left;">
+<b>${w.name} ✅</b><br><span style="color:#666; font-size:13px;">${w.cat} • 📍 ${w.area}</span><br><span>⭐ ${w.rating}</span><br><b style="color:#0a7a42;">KES ${w.price} / job</b>
+</div>
+<a href="https://wa.me/${w.phone}?text=Hi ${w.name}, I need a ${w.cat} in ${w.area}." target="_blank" style="background:#25D366; color:#fff; padding:10px 12px; border-radius:20px; text-decoration:none; font-weight:bold; font-size:13px;">WhatsApp</a>
+</div>`).join('');
+}
+function signup(){let n=document.getElementById('uName').value; if(!n){alert('Enter Name');return;} document.getElementById('authMsg').innerText='Welcome '+n+'! ✅'; setTimeout(()=>{document.getElementById('auth').style.display='none';},800);}
+function addWorker(){let n=document.getElementById('wName').value; let c=document.getElementById('wCat').value; let a=document.getElementById('wArea').value; let pr=document.getElementById('wPrice').value; let ph=document.getElementById('wPhone').value; if(!n||!a||!pr||!ph){alert('Fill all');return;} workers.unshift({name:n,cat:c,area:a,price:pr,rating:"New ⭐",phone:ph,img:"https://i.pravatar.cc/150?img=68"}); localStorage.setItem('hubWorkers',JSON.stringify(workers)); document.getElementById('listForm').style.display='none'; render(); alert('Your service is LIVE! ✅');}
+render();
+</script>
