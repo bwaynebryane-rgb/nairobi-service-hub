@@ -58,7 +58,7 @@ body{background:#f5f5f5;color:#333}
 <div class="topbar"><div class="top-inner">
 <div class="logo">Nairobi<span>Hub</span> 🧡</div>
 <div class="search"><input id="q" placeholder="Search plumber, cleaner, electrician..." oninput="render()"><button onclick="render()">SEARCH</button></div>
-<button class="btn btn-white" onclick="openAuth()">👤 LOGIN / SIGN UP</button>
+<button id="authBtn" class="btn btn-white" onclick="openAuth()">👤 LOGIN / SIGN UP</button>
 <button class="btn btn-dark" onclick="openList()">+ LIST SERVICE</button>
 </div></div>
 
@@ -150,6 +150,7 @@ let users=JSON.parse(localStorage.getItem('hub_users')||'[]');
 let u=users.find(x=>x.email==e&&x.pass==p);
 if(!u){document.getElementById('authMsg').innerHTML='❌ Wrong email or password. Try Create Account first.';return}
 document.getElementById('authMsg').innerHTML='🎉 Welcome back '+u.name+'! Logged in.';
+localStorage.setItem('hubUser', e); updateAuthUI();
 setTimeout(closeAll,1000);
 }
 function addWorker(){
@@ -160,6 +161,19 @@ localStorage.setItem('hub_workers',JSON.stringify(workers));
 closeAll(); render(); alert('Published! ✅');
 }
 render();
+function updateAuthUI(){
+  let user = localStorage.getItem('hubUser');
+  let btn = document.getElementById('authBtn');
+  if(!btn) return;
+  if(user){
+    btn.innerHTML = '👋 ' + user.split('@')[0] + ' | LOGOUT';
+    btn.onclick = function(){ localStorage.removeItem("hubUser"); updateAuthUI(); location.reload(); };
+  } else {
+    btn.innerHTML = '👤 LOGIN / SIGN UP';
+    btn.onclick = function(){ openAuth(); };
+  }
+}
+updateAuthUI();
 </script>
 </body>
 </html>
