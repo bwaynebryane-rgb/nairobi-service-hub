@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Nairobi Service Hub</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,Arial,sans-serif}
+body{background:#f6f7f9;color:#111}
+.top{background:#111;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.top b{font-size:20px}
+.top b span{color:#f5b301}
+.top a{color:#fff;text-decoration:none;font-size:14px;border:1px solid #333;padding:8px 14px;border-radius:999px}
+.wrap{max-width:1000px;margin:0 auto;padding:36px 16px 60px;text-align:center}
+.badge{display:inline-block;background:#fff3cd;color:#7a5a00;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+h1{font-size:34px;margin:16px 0 8px;line-height:1.15}
+p.sub{color:#666;font-size:16px;max-width:600px;margin:0 auto 28px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:28px}}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.card .icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:14px}
+.blue .icon{background:#eef4ff}.green .icon{background:#e9f9ee}
+.card h2{font-size:22px;margin-bottom:6px}
+.card p{color:#666;font-size:14.5px;line-height:1.6;margin-bottom:18px}
+.card ul{list-style:none;margin-bottom:20px}
+.card li{font-size:14px;padding:7px 0;border-bottom:1px solid #f0f0f0;color:#333}
+.card li:before{content:"✓ ";color:#16a34a;font-weight:700}
+.btn{display:block;text-align:center;padding:14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px}
+.blue .btn{background:#111;color:#fff}
+.green .btn{background:#16a34a;color:#fff}
+.trust{margin-top:22px;color:#888;font-size:13px}
+.trust b{color:#333}
+</style>
+</head>
+<body>
+<div class="top"><b>NAIROBI SERVICE <span>HUB</span></b><a href="index.html">← Back Home</a></div>
+<div class="wrap">
+<span class="badge">⭐ Trusted in Nairobi • Verified Workers</span>
+<h1>What would you like to do today?</h1>
+<p class="sub">Choose your dashboard. Employers and workers see a different experience.</p>
+<div class="grid">
+<div class="card blue">
+<div class="icon">👔</div>
+<h2>I Want to Hire Workers</h2>
+<p>Find verified workers fast for cleaning, moving, construction, plumbing and more.</p>
+<ul>
+<li>Post a job in 1 minute</li>
+<li>See verified workers near you</li>
+<li>Chat & hire directly</li>
+<li>Rate worker after job</li>
+</ul>
+<a class="btn" href="employer.html">Continue as Employer →</a>
+</div>
+<div class="card green">
+<div class="icon">👷</div>
+<h2>I Am a Worker</h2>
+<p>Find daily jobs, apply fast, build your rating and grow your earnings.</p>
+<ul>
+<li>See jobs near you</li>
+<li>Apply in one tap</li>
+<li>Track your jobs & earnings</li>
+<li>Build your rating & trust</li>
+</ul>
+<a class="btn" href="worker.html">Continue as Worker →</a>
+</div>
+</div>
+<p class="trust">🔒 <b>Safe & Verified</b> • No upfront payment • Pay after job is done</p>
+</div>
+</body>
+</html>
